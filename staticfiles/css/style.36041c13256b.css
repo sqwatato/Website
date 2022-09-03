@@ -1,0 +1,186 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Mada", sans-serif;
+    background-color: #fbe8a6;
+    /* margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%; */
+}
+
+#about {
+    height: 750px;
+    
+    color: #303c6c;
+    
+}
+
+#experience {
+    height: 800px;
+    
+    color: #303c6c;
+}
+
+#skills {
+    height: 850px;
+    
+    color: #303c6c;
+}
+
+#projects {
+    height: 800px;
+    
+    color: #303c6c;
+}
+
+.content {
+    padding-left: 6%;
+    padding-top: 3%;
+    padding-right: 6%;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text {
+    /* border-radius: 10px;
+    background-color: #2f087b; */
+    /* color: #303c6c; */
+    width: 54%;
+    height: auto;
+    margin-left: auto;
+    font-size: 18px;
+}
+
+.text2 {
+    /* border-radius: 10px;
+    background-color: #2f087b; */
+    
+    /* width: 54%;
+    height: auto; */
+    margin-left: auto;
+    font-size: 18px;
+}
+
+.header {
+    /* color: #303c6c; */
+    font-weight: bold;
+    text-align: center;
+}
+
+.header2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.header-div {
+    margin-bottom: 4%;
+}
+
+.nav-item {
+    margin-right: 2%;
+}
+
+.nav {
+    font-size: 22px;
+    padding-left: 5%;
+    padding-top: 1%;
+    padding-right: 6%;
+    
+}
+
+.nav-link {
+    color: #f19e77;
+
+}
+
+.nav-link:hover {
+    text-decoration: none;
+    color: #f8610f;
+    
+}
+
+#self-pic {
+    width: 38%;
+    height: auto;
+    border-radius: 10px;
+}
+
+i {
+    color: #e89d8f;
+    font-size: 700%;
+}
+
+ul.cloud {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.5rem;
+    width: 95%;
+    height: auto;
+    text-align: center;
+    padding-left: 4.5%;
+
+}
+
+.icon {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.icon2 {
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+.icon-text {
+    text-align: center;
+    color: #e89d8f;
+    font-family: "Mada", sans-serif;
+    font-weight: bold;
+}
+
+.pad1 {
+    padding-left: 1%;
+}
+
+#js-small {
+    font-size: 93%;
+    padding-bottom: 0.8%;
+}
+
+#terminal-small {
+    font-size: 653%;
+    padding-bottom: 14%;
+}
+
+#database-small {
+    padding-bottom: 9%;
+}
+
+#vs-small {
+    padding-right: 4%;
+}
+
+#python {
+    color: #7689d8;
+    /* font-size: 850%; */
+}
+
+#python-text {
+    font-size: 160%;
+    color: #7689d8;
+}
+
+#skill-text{
+    color: #656565;
+    font-size: x-large;
+    text-align: center;
+}

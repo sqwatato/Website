@@ -1,0 +1,227 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block body %}
+        <div class="alert alert-success fade show" role="alert">
+            Message was sent successfully! 
+        </div>
+        <div class="alert alert-danger fade show">
+            There was an error parsing your message.
+        </div>
+
+    <div id="about" class="content">
+
+        <div class="header-div">
+            <h1 class="header">About Me</h1>
+        </div>
+
+        <div class="about pages">
+            <img id="self-pic" src="{% static 'images/jayden.jpg' %}" alt="Picture of Jayden in Greece">
+            <p class="text">
+                <br>
+                <span class="header2">I'm Jayden, an aspiring software engineer, aiming to build tools for people in need in the future.</span>
+                <br><br>
+                My primary language is Python, with skills in Machine Learning, Automation, and Web Development. 
+                <br><br>
+                I'm from the Bay Area in California. As a sophomore in highschool, I'm searching for research oppurtunities with professors at universities. I'm also working on multiple small coding project to further explore the possibilities of code.
+                <br><br>
+                In my free time, besides coding, I like playing video games <span>(Valorant, Clash of Clans)</span> and badminton!
+            </p>
+        </div>
+
+    </div>
+
+    {% comment %} <div class="space"></div>
+
+    <div id="experience" class="content">
+
+        <div class="header-div">
+            <h1 class="header">Experience</h1>
+        </div>
+        <div class="experience">
+            
+        </div>
+    </div> {% endcomment %}
+
+    <div class="space"></div>
+
+    <div id="skills" class="content">
+        <div class="header-div">
+            <h1 class="header">Technology that power my projects</h1>
+            {% comment %} <p id="skill-text">
+                The technologies that power my projects
+            </p> {% endcomment %}
+        </div>
+        <div class="skills pages"> 
+            <ul class="cloud">
+                
+                <div class="icon">
+                    <li><i class="devicon-html5-plain"></i></li>
+                    <p class="icon-text">HTML</p>
+                </div>
+                <div class="icon">
+                    <li><i class="devicon-css3-plain"></i></li>
+                    <p class="icon-text">CSS</p>
+                </div>
+                <div class="icon" id="js-small">
+                    <li><i class="devicon-javascript-plain"></i></li>
+                    <p class="icon-text" id="js-text">Javascript</p>
+                </div>
+                
+            </ul>
+            <ul class="cloud">
+                <div class="icon pad1">
+                    <li><i class="fa-solid fa-gears"></i></li>
+                    <p class="icon-text">Automation</p>
+                </div>
+                <div class="icon">
+                    <li><i class="devicon-django-plain"></i></li>
+                    <p class="icon-text">Django</p>
+                </div>
+                <div class="icon">
+                    <li><i id="python" class="devicon-python-plain"></i></li>
+                    <p class="icon-text" id="python-text">Python</p>
+                </div>
+                <div class="icon pad1">
+                    <li><i class="fa-solid fa-brain"></i></li>
+                    <p class="icon-text">Machine Learning</p>
+                </div>
+                <div class="icon pad1">
+                    <li><i class="fa-solid fa-chart-simple"></i></li>
+                    <p class="icon-text">Data Science</p>
+                </div>
+            </ul>
+            <ul class="cloud shift-left-1">
+                <div class="icon pad1">
+                    <li><i class="fa-solid fa-terminal" id="terminal-small"></i></li>
+                    <p class="icon-text">Terminal</p>
+                </div>
+                <div class="icon">
+                    <li><i class="devicon-git-plain"></i></li>
+                    <p class="icon-text">Git</p>
+                </div>
+                <div class="icon">
+                    <li><i class="devicon-github-original"></i></li>
+                    <p class="icon-text">Github</p>
+                </div>
+                <div class="icon" id="vs-small">
+                    <li><i class="devicon-vscode-plain"></i></li>
+                    <p class="icon-text">VS Code</p>
+                </div>
+                
+                <div class="icon pad1">
+                    <li><i class="fa-solid fa-database" id="database-small"></i></li>
+                    <p class="icon-text">Databases</p>
+                </div>
+                <div class="icon2">
+                    <li><i class="devicon-java-plain"></i></li>
+                    <p class="icon-text">Java</p>
+                </div>
+                <div class="icon2">
+                    <li><i class="devicon-heroku-original"></i></li>
+                    <p class="icon-text">Heroku</p>
+                </div>
+                <div class="icon-spacer"></div>
+            </ul>
+            
+        </div>
+    </div>
+
+    <div class="space"></div>
+
+    <div id="projects" class="content">
+        <div class="header-div">
+            <h1 class="header">My Favorite Works</h1>
+        </div>
+        
+        <div class="container projects pages">
+            {% for p1, p2 in projects %}
+                <div class="row">
+                    <div class="project col-md-5">
+                        <figure class="project-fig">
+                            <div class="project-image-div">
+                                <img class="project-image" src="{% static 'images/'|add:p1.image %}">
+                            </div>
+                            <figcaption>
+                                <div>
+                                    <p class="project-title">{{p1.title}}</p>
+                                    <hr class="project-hr">
+                                    <p class="project-blurb">{{p1.blurb}}</p>
+                                    <div class="project-links">
+
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="project col-md-5 offset-md-1">
+                        <figure class="project-fig">
+                            <div class="project-image-div">
+                                <img class="project-image" src="{% static 'images/'|add:p2.image %}">
+                            </div>
+                            <figcaption>
+                                <div>
+                                    <p class="project-title">{{p2.title}}</p>
+                                    <hr class="project-hr">
+                                    <p class="project-blurb">{{p2.blurb}}</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="space"></div>
+
+    <div id="contact" class="content">
+
+        <div class="header-div">
+            <h1 class="header">Get In Touch</h1>
+        </div>
+        <div class="contact pages">
+            <form id="contact-form" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <input id="contact-submit" type="submit" value="Submit" class="fill">
+            </form>
+            {% comment %} <div class="ferris_wheel">
+                <div class="wheel_wrap">
+                  <div class="wheel">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="buckets">
+                  <div><span></span></div>
+                  <div><span></span></div>
+                  <div><span></span></div>
+                  <div><span></span></div>
+                  <div><span></span></div>
+                  <div><span></span></div>
+                  <div><span></span></div>
+                  <div><span></span></div>
+                </div>
+                <div class="stand"><span></span></div>
+            </div> {% endcomment %}
+        </div>
+    </div>
+    <div class="space"></div>
+    <footer class="site-footer">
+        <div>
+            <div class="footer-bottom flex justify-space-between">
+                <div class="social-links-wrap flex">
+                    <div class="social-links flex">
+                        <a href="https://github.com/sqwatato" aria-label="github link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg></a>
+                    </div>
+                </div> 
+                <div class="copyright">
+                    © 2022 Jayden Lim
+                </div> 
+            </div>
+        </div>
+    </footer>
+
+    </div>
+    
+{% endblock %}
