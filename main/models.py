@@ -18,7 +18,7 @@ class Project(models.Model):
 # Tags for Projects
 class ProjectTag(models.Model):
     name = models.TextField(max_length=25)
-    projects = models.ManyToManyField(Project, related_name="tags", blank=True, null=True)
+    projects = models.ManyToManyField(Project, related_name="tags", blank=True)
 
 # Contact Message Object
 class Contact(models.Model):
