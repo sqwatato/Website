@@ -6,7 +6,6 @@ $(function(){
     var sticky = 1;
 
     window.onscroll = function() {
-        console.log(window.pageYOffset + " " + sticky)
         if (window.pageYOffset >= sticky) {
             navbar.classList.add("sticky")
         } else {

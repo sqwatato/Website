@@ -32,7 +32,6 @@ def index(request):
     return render(request, "main/index.html", {
         "projects": paired,
         "form": form,
-        "message": "none",
     })
 
 

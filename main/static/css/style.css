@@ -88,8 +88,8 @@ body {
 
 footer {
     background-color: #b0b9de;
-    padding-left: 42%;
-    padding-right: 42%;
+    padding-left: 43%;
+    padding-right: 43%;
     padding-top: 2%;
     padding-bottom: 2%;
 }
@@ -362,11 +362,11 @@ figure.project-fig:hover .project-hr {
 
 }
 
-#contact-form {
+/* #contact-form {
     width: 35%;
     padding-left: 30%;
     padding-right: auto;
-}
+} */
 
 #message-text {
     height: 200px;
