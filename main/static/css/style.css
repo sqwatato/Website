@@ -362,11 +362,11 @@ figure.project-fig:hover .project-hr {
 
 }
 
-/* #contact-form {
+#contact-form {
     width: 35%;
     padding-left: 30%;
     padding-right: auto;
-} */
+}
 
 #message-text {
     height: 200px;
