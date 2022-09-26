@@ -183,7 +183,7 @@ footer {
     object-fit: cover;
 }
 
-i {
+ul.cloud > i {
     color: #e89d8f;
     font-size: 700%;
 }
@@ -422,6 +422,10 @@ label {
 .fill:hover {
     color: white;
     border-color: #7689d8;
+}
+
+.project-project {
+    font-size: 20%;
 }
 
 

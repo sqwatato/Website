@@ -22,9 +22,9 @@
                 <br><br>
                 My primary language is Python, with skills in Machine Learning, Automation, and Web Development. 
                 <br><br>
-                I'm from the Bay Area in California. As a sophomore in highschool, I'm searching for research oppurtunities with professors at universities. I'm also working on multiple small coding project to further explore the possibilities of code.
+                I'm from the Bay Area in California. As a sophomore in highschool, I'm searching for research opportunities with professors at universities. I'm also working on multiple small coding project to further explore the possibilities of code.
                 <br><br>
-                In my free time, besides coding, I like playing video games <span>(Valorant, Clash of Clans)</span> and badminton!
+                In my free time, besides coding, I like playing video games and badminton!
             </p>
         </div>
 
@@ -153,7 +153,12 @@
                                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                                             </svg>
                                         </a>
-                                        
+                                        {% if p1.website_link|length > 0%}
+                                            <a href="{{p1.website_link}}">
+                                                {% comment %} <i class="fa-solid fa-display"></i> {% endcomment %}
+                                                <i class="devicon-github-original project-project"></i>
+                                            </a>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </figcaption>
@@ -176,6 +181,12 @@
                                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                                             </svg>
                                         </a>
+                                        {% if p2.website_link|length > 0%}
+                                            <a href="{{p2.website_link}}" class="project-project" font-size="20px">
+                                                {% comment %} <i class="fa-solid fa-display"></i> {% endcomment %}
+                                                <i class="devicon-github-original project-project"></i>
+                                            </a>
+                                        {% endif %}
                                         
                                     </div>
                                 </div>
