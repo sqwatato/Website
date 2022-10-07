@@ -57,12 +57,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -154,6 +156,12 @@ STATIC_URL = '/static/'
 # Enable WhiteNoise's GZip compression of static assets.
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5000',
+    'https://jaydenclim.herokuapp.com/',
+    'https://open.spotify.com/',
+]
+
 # # Test Runner Config
 # class HerokuDiscoverRunner(DiscoverRunner):
 #     """Test Runner for Heroku CI, which provides a database for you.
@@ -185,3 +193,4 @@ EMAIL_HOST_USER = 'apikey'
 EMAIL_HOST_PASSWORD = os.environ["SENDGRID_API_KEY"]
 
 django_heroku.settings(locals())
+
