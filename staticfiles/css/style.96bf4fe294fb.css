@@ -355,9 +355,8 @@ figure.project-fig:hover .project-hr {
 
 .tag-list {
   display: inline;
-  list-style-type: none;
+  list-style-type: url('/main/static/images/tag.svg');
   color: lime;
-  font-size: small;
 }
 
 

@@ -353,14 +353,14 @@ figure.project-fig:hover .project-hr {
   animation: 1s text-reveal ease-out 1;
 }
 
-.tag-list {
+/* .tag-list {
   display: inline;
   list-style-type: none;
-  color: lime;
-  font-size: small;
+} */
+
+.tag-list > li {
+    color: #e89d8f;
 }
-
-
 
 #contact-form {
   width: 35%;

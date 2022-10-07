@@ -354,7 +354,7 @@ figure.project-fig:hover .project-hr {
 }
 
 .tag-list {
-  display: inline;
+  display: inline-flex;
   list-style-type: none;
   color: lime;
   font-size: small;

@@ -146,6 +146,20 @@
                                     <p class="project-title">{{p1.title}}</p>
                                     <hr class="project-hr">
                                     <p class="project-blurb">{{p1.blurb}}</p>
+                                    <div>
+                                        <ul class="tag-list">
+                                            {% for tag in p1.tags.all %}
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                        <circle cx="8.5" cy="8.5" r="1" fill="currentColor" />
+                                                        <path d="M4 7v3.859c0 .537 .213 1.052 .593 1.432l8.116 8.116a2.025 2.025 0 0 0 2.864 0l4.834 -4.834a2.025 2.025 0 0 0 0 -2.864l-8.117 -8.116a2.025 2.025 0 0 0 -1.431 -.593h-3.859a3 3 0 0 0 -3 3z" />
+                                                    </svg>
+                                                    {{tag.name}}
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
                                     <div class="project-links">
                                         <a href="{{p1.github}}" aria-label="GitHub" target="_blank" rel="noreferrer" class="github-project">
                                             <svg height="30px" width="30px"  xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
@@ -154,9 +168,13 @@
                                             </svg>
                                         </a>
                                         {% if p1.website_link|length > 0%}
-                                            <a href="{{p1.website_link}}">
-                                                {% comment %} <i class="fa-solid fa-display"></i> {% endcomment %}
-                                                <i class="devicon-github-original project-project"></i>
+                                            <a href="{{p1.website_link}}" class="project-project" font-size="20px">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="30px" height="30px" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5"></path>
+                                                    <line x1="10" y1="14" x2="20" y2="4"></line>
+                                                    <polyline points="15 4 20 4 20 9"></polyline>
+                                                 </svg>
                                             </a>
                                         {% endif %}
                                     </div>
@@ -183,8 +201,12 @@
                                         </a>
                                         {% if p2.website_link|length > 0%}
                                             <a href="{{p2.website_link}}" class="project-project" font-size="20px">
-                                                {% comment %} <i class="fa-solid fa-display"></i> {% endcomment %}
-                                                <i class="devicon-github-original project-project"></i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="30px" height="30px" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5"></path>
+                                                    <line x1="10" y1="14" x2="20" y2="4"></line>
+                                                    <polyline points="15 4 20 4 20 9"></polyline>
+                                                 </svg>
                                             </a>
                                         {% endif %}
                                         

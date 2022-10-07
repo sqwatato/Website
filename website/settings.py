@@ -49,6 +49,7 @@ CSRF_COOKIE_SECURE = True
 
 INSTALLED_APPS = [
     'main',
+    'genius',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
