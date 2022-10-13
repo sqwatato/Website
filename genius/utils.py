@@ -4,6 +4,7 @@ import json
 import os
 environ.Env.read_env()
 genius = lyricsgenius.Genius(os.environ['GENIUS_ACCESS_TOKEN'])
+genius.remove_section_headers = True
 
 def get_song(title, author):
     try:
