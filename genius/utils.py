@@ -11,7 +11,7 @@ def get_song(title, author):
         song = genius.search_song(title,author)
         lyrics = song.lyrics.splitlines()
         for line in lyrics:
-            if "You might also like" in line:
+            if "You might also like" in line or "Embed" in line:
                 lyrics.remove(line)
         return lyrics
     except:
