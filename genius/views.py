@@ -5,6 +5,7 @@ import os
 from .utils import get_song
 
 genius = lyricsgenius.Genius(os.environ['GENIUS_ACCESS_TOKEN'])
+genius.remove_section_headers = True
 # Create your views here.
 
 def lyrics(request, title="", author=""):

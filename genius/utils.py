@@ -8,7 +8,11 @@ genius = lyricsgenius.Genius(os.environ['GENIUS_ACCESS_TOKEN'])
 def get_song(title, author):
     try:
         song = genius.search_song(title,author)
-        return song.lyrics.splitlines()
+        lyrics = song.lyrics.splitlines()
+        for line in lyrics:
+            if "You might also like" in line:
+                lyrics.remove(line)
+        return lyrics
     except:
         return None
 
