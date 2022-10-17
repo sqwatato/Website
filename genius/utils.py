@@ -1,6 +1,6 @@
 import environ
 import lyricsgenius
-import json
+
 import os
 from .models import Song
 environ.Env.read_env()
