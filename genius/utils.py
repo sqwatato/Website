@@ -2,6 +2,7 @@ import environ
 import lyricsgenius
 import json
 import os
+from .models import Song
 environ.Env.read_env()
 genius = lyricsgenius.Genius(os.environ['GENIUS_ACCESS_TOKEN'])
 genius.remove_section_headers = True
@@ -15,7 +16,14 @@ def get_song(title, author):
                 lyrics[lyrics.index(line)] = line.replace("You might also like", "").replace("Embed", "")
         return lyrics
     except:
-        return None
+        pass
+    try:
+        song = Song.objects.get(title=title, author=author)
+        return song.lyrics
+    except:
+        pass
+    return None
+        
 
 
 
