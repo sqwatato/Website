@@ -158,8 +158,8 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5000',
-    'https://jaydenclim.herokuapp.com/',
-    'https://open.spotify.com/',
+    # 'https://jaydenclim.herokuapp.com/',
+    # 'https://open.spotify.com/',
 ]
 
 # # Test Runner Config

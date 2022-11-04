@@ -41,11 +41,11 @@ body {
   animation-fill-mode: forwards;
 }
 
-*,
+/* *,
 *::before,
 *::after {
   box-sizing: inherit;
-}
+} */
 
 .pages {
   color: #303c6c;
@@ -179,10 +179,10 @@ footer {
   object-fit: cover;
 }
 
-ul.cloud > i {
+/* .cloud >  i {
   color: #e89d8f;
   font-size: 700%;
-}
+} */
 
 ul.cloud {
   list-style: none;
@@ -198,14 +198,16 @@ ul.cloud {
   padding-left: 2.3%;
 }
 
-.icon {
-  padding-left: 2%;
-  padding-right: 2%;
+.icon > li > i, .icon2 > li > i {
+  padding-left: 3%;
+  padding-right: 3%;
+  color: #e89d8f;
+  font-size: 700%;
 }
 
 .icon2 {
-  padding-right: 1%;
-  padding-left: 1%;
+  /* padding-right: 1%; */
+  padding-left: 2%;
 }
 
 .icon-text {
@@ -224,23 +226,30 @@ ul.cloud {
   width: 3%;
 }
 
+.shift-left-1 {
+  margin-right: 2%;
+}
+
 #js-small {
   font-size: 93%;
   padding-bottom: 0.8%;
+  padding-left: 1%;
   margin-top: 10px;
 }
 
 #terminal-small {
-  font-size: 653%;
+  font-size: 623%;
   padding-bottom: 14%;
 }
 
 #database-small {
   padding-bottom: 9%;
+  font-size: 683%;
 }
 
 #vs-small {
-  padding-right: 4%;
+  padding-right: 1%;
+  padding-left: 1%;
 }
 
 #python {
@@ -260,6 +269,12 @@ ul.cloud {
 
 #js-text {
   margin-top: 6px;
+  padding-left: 1%;
+}
+
+.git-shift {
+  padding-right: 1%;
+  padding-left: 2%;
 }
 
 .projects > div {
@@ -354,7 +369,7 @@ figure.project-fig:hover .project-hr {
 }
 
 .tag-list {
-  display: inline;
+  display: inline-flex;
   list-style-type: none;
   color: lime;
   font-size: small;
@@ -363,7 +378,7 @@ figure.project-fig:hover .project-hr {
 
 
 #contact-form {
-  width: 35%;
+  width: 70%;
   padding-left: 30.5%;
   padding-right: auto;
 }
@@ -414,6 +429,7 @@ label {
   border-radius: 15px;
   position: absolute;
   left: 45%;
+  top: 393%;
   margin-top: 20px;
 }
 
